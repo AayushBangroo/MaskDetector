@@ -1,0 +1,49 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
+  </head>
+
+  <body>
+    <!-- Navigation Bar -------------------------------------------------------------------------------->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <img class="mask-img" src="../static/head-side-mask-solid.svg" alt="">
+      <a class="navbar-brand">Mask Detector</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mt-2 mt-lg-0">
+          <li class="nav-item active mr-2">
+            <a class="nav-link" href="/main">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item mr-2">
+            <a class="nav-link" href="/">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- about -->
+    <div class="about">
+        <div class="about-main">
+            <h1 class="about-heading">COVID-19 Mask Detector</h1>
+            <p>The aim of the project is to develop an application capable of detecting masks on a person's face. This application operates in two modes:
+            <ul class="about-list">
+                <li>Live Capture</li>
+                <li>Image Capture</li>
+            </ul>
+            In the Live Capture mode mask detection is done on a video stream which is captured using the camera and in the second mode Image Capture mask detection is done on an image uploaded by the user.
+            Click on the below button to head over to mode selection.
+            </p>
+            <a class="about-btn" href="/main">Detect</a>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static',filename='app.js') }}"> </script>
+  </body>
+  
+</html>
